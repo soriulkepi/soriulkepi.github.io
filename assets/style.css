@@ -58,8 +58,8 @@ img{max-width:100%;display:block}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--txt);
   font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16.5px;letter-spacing:-.01em}
 .brand svg{flex:none}
-.brand small{display:block;font-family:'Noto Sans KR',sans-serif;font-weight:400;
-  font-size:10.5px;color:var(--dim);letter-spacing:0;line-height:1.3;margin-top:1px}
+.brand small{display:block;font-family:'IBM Plex Sans','Noto Sans KR',sans-serif;font-weight:400;
+  font-size:10.5px;color:var(--dim);letter-spacing:.012em;line-height:1.35;margin-top:2px;white-space:nowrap}
 
 .menu{display:flex;gap:28px;font-size:14px}
 .menu a{color:var(--dim);text-decoration:none;transition:color .15s;padding:4px 0}
@@ -275,6 +275,7 @@ h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.015em}
   .cvlist li{grid-template-columns:1fr;gap:4px}
   .foot-grid{grid-template-columns:1fr;gap:26px}
   .hero{padding:64px 0 76px}
+  .brand small{font-size:9.5px;white-space:normal;max-width:22ch}
 }
 
 @media (prefers-reduced-motion:reduce){
