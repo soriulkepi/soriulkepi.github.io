@@ -239,25 +239,18 @@ a.card:hover .visit{text-decoration:underline}
 .slot b{display:block;color:var(--txt);font-family:'Space Grotesk',sans-serif;
   font-size:16px;margin-bottom:6px}
 /* real member card */
-.member{border:1px solid var(--line);border-left:3px solid var(--mint);
-  border-radius:12px;padding:22px 22px 20px;background:var(--bg2);transition:.18s}
-.member:hover{border-color:var(--mint);background:var(--bg3);transform:translateY(-3px)}
+.member{border:1px solid var(--line);border-radius:12px;padding:22px 22px 20px;
+  background:var(--bg2);transition:.18s}
+.member:hover{border-color:var(--line2);transform:translateY(-3px)}
 .member .m-role{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;
   text-transform:uppercase;color:var(--mint);margin:0 0 12px}
-.member h3{font-size:18px;font-weight:700;color:var(--txt);margin:0 0 2px}
+.member h3{font-size:18px;font-weight:700;margin:0 0 2px}
 .member .m-ko{font-family:'Noto Sans KR',sans-serif;font-size:13px;color:var(--dim);margin:0 0 12px}
 .member p{font-size:13.5px;color:var(--body);line-height:1.6;margin:0 0 12px}
 .member .m-meta{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--faint);
   display:flex;flex-wrap:wrap;gap:6px 14px}
 .member .m-meta a{color:var(--mint);text-decoration:none}
 .member .m-meta a:hover{text-decoration:underline}
-/* member subgroup heading */
-.m-group{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--dim);margin:34px 0 16px;padding-bottom:8px;
-  border-bottom:1px solid var(--line)}
-.m-group:first-of-type{margin-top:6px}
-.m-group .ko{font-family:'Noto Sans KR',sans-serif;letter-spacing:0;text-transform:none;
-  color:var(--faint);font-size:12px;margin-left:8px}
 
 /* ---------- Join / list blocks ---------- */
 .checks{list-style:none;margin:0;padding:0}
@@ -366,3 +359,16 @@ a.card:hover .visit{text-decoration:underline}
   border-radius:16px;background:#fff}
 .pipeline figcaption{margin-top:14px;font-size:13px;color:var(--dim);
   font-family:'Noto Sans KR',sans-serif}
+
+/* ===== Index: News & updates (timeline) ===== */
+
+.news-list{display:flex;flex-direction:column;gap:0}
+.news-item{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:18px 0;
+  border-bottom:1px solid var(--line)}
+.news-item:last-child{border-bottom:0}
+.news-date{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--faint);padding-top:2px}
+.news-body h4{font-size:15.5px;font-weight:500;color:var(--txt);margin:0 0 4px;line-height:1.5}
+.news-body p{font-size:13.5px;color:var(--dim);margin:0}
+.news-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;
+  letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border-radius:999px;margin-bottom:7px;
+  color:var(--ch,#5fd4bb);background:color-mix(in srgb,var(--ch,#5fd4bb) 12%,transparent)}
