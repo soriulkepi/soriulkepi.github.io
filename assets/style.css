@@ -176,15 +176,17 @@ h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.015em}
 .track-id{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--ch,var(--mint))}
 .track-id b{display:block;font-family:'Space Grotesk',sans-serif;font-size:34px;
-  font-weight:700;letter-spacing:-.03em;color:var(--txt);margin-top:8px;text-transform:none}
+  font-weight:700;letter-spacing:-.03em;color:var(--ch,var(--mint));margin-top:8px;
+  text-transform:none;line-height:1.05}
 .track h3{font-size:23px;margin:0 0 5px}
 .track h4{font-family:'Noto Sans KR',sans-serif;font-size:14px;font-weight:400;
   color:var(--dim);margin:0 0 16px}
 .track p{color:var(--body);margin:0 0 14px;font-size:15.5px}
 .track p.ko{color:var(--dim);font-size:14px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.tags span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--dim);
-  border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.tags span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ch,var(--dim));
+  border:1px solid var(--line);border-radius:999px;padding:5px 12px;
+  background:color-mix(in srgb, var(--ch,#5fd4bb) 6%, transparent)}
 
 /* ---------- Publications ---------- */
 .year{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;color:var(--mint);
