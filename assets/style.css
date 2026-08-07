@@ -328,9 +328,8 @@ h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.015em}
 .paper-card .pc-link::after{content:"\2197";font-size:13px}
 
 /* ===== Research: 파이프라인 그림 ===== */
-.pipeline{margin:0 0 8px}
 .pipeline figure{margin:0}
 .pipeline img{width:100%;height:auto;display:block;border:1px solid var(--line);
   border-radius:16px;background:#fff}
-.pipeline figcaption{margin-top:12px;text-align:center;font-size:13px;color:var(--dim);
+.pipeline figcaption{margin-top:14px;font-size:13px;color:var(--dim);
   font-family:'Noto Sans KR',sans-serif}
