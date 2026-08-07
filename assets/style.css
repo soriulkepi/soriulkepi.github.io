@@ -33,7 +33,7 @@ body{
   font-size:16px;
   line-height:1.65;
   word-break:keep-all;
-  overflow-wrap:break-word;   
+  overflow-wrap:break-word;
   -webkit-font-smoothing:antialiased;
 }
 
@@ -300,3 +300,37 @@ h3{font-family:'Space Grotesk',sans-serif;letter-spacing:-.015em}
   .mplot .halo{display:none}
   html{scroll-behavior:auto}
 }
+
+
+/* ===== Research: 대표 질문 ===== */
+.track-q{margin:2px 0 14px;padding:12px 16px;border-left:3px solid var(--ch,#5fd4bb);
+  background:color-mix(in srgb, var(--ch,#5fd4bb) 7%, transparent);border-radius:0 8px 8px 0}
+.track-q .q-en{font-family:'Space Grotesk',sans-serif;font-weight:500;font-size:15px;
+  color:var(--txt);font-style:italic;line-height:1.4}
+.track-q .q-ko{display:block;font-family:'Noto Sans KR',sans-serif;font-size:13px;
+  color:var(--dim);margin-top:5px;line-height:1.5}
+
+/* ===== Research: 대표 논문 카드 ===== */
+.paper-card{display:block;margin-top:16px;padding:16px 18px;border:1px solid var(--line);
+  border-radius:12px;background:var(--bg2);text-decoration:none;transition:.18s;
+  border-left:3px solid var(--ch,#5fd4bb)}
+.paper-card:hover{border-color:var(--ch,#5fd4bb);background:var(--bg3);transform:translateY(-2px)}
+.paper-card .pc-top{display:flex;align-items:center;gap:8px;margin-bottom:7px;flex-wrap:wrap}
+.paper-card .pc-tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ch,#5fd4bb);font-weight:500}
+.paper-card .pc-journal{font-family:'IBM Plex Sans',sans-serif;font-size:12px;color:var(--faint);
+  padding-left:8px;border-left:1px solid var(--line2)}
+.paper-card .pc-title{font-family:'IBM Plex Sans',sans-serif;font-weight:500;font-size:14.5px;
+  color:var(--txt);line-height:1.4;margin:0 0 6px}
+.paper-card .pc-result{font-size:13px;color:var(--body);line-height:1.5;margin:0 0 8px}
+.paper-card .pc-link{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ch,#5fd4bb);
+  display:inline-flex;align-items:center;gap:5px}
+.paper-card .pc-link::after{content:"\2197";font-size:13px}
+
+/* ===== Research: 파이프라인 그림 ===== */
+.pipeline{margin:0 0 8px}
+.pipeline figure{margin:0}
+.pipeline img{width:100%;height:auto;display:block;border:1px solid var(--line);
+  border-radius:16px;background:#fff}
+.pipeline figcaption{margin-top:12px;text-align:center;font-size:13px;color:var(--dim);
+  font-family:'Noto Sans KR',sans-serif}
