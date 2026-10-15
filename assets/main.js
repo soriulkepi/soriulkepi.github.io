@@ -132,3 +132,26 @@ window.addEventListener('resize', function () {
   clearTimeout(mplotTimer);
   mplotTimer = setTimeout(drawManhattan, 180);
 });
+
+/* ===== Footer: last updated (GitHub 최근 Commit 날짜) ===== */
+(function(){
+  var REPO = 'soriulkepi/soriulkepi.github.io';
+  var bot = document.querySelector('.foot-bot');
+  if (!bot) return;
+  var meta = document.createElement('span');
+  meta.className = 'foot-meta';
+  meta.innerHTML = '<span id="last-updated" hidden></span>';
+  bot.appendChild(meta);
+
+  function fmt(d){ var p=function(n){return (n<10?'0':'')+n};
+    return d.getFullYear()+'.'+p(d.getMonth()+1)+'.'+p(d.getDate()); }
+
+  fetch('https://api.github.com/repos/' + REPO + '/commits?per_page=1')
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){
+      if (!d || !d[0]) return;
+      var el = document.getElementById('last-updated');
+      el.textContent = 'Last updated · ' + fmt(new Date(d[0].commit.committer.date));
+      el.hidden = false;
+    }).catch(function(){});
+})();
