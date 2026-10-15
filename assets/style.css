@@ -428,3 +428,25 @@ a.card:hover .visit{text-decoration:underline}
 
 .news-body a{color:var(--mint);text-decoration:none}
 .news-body a:hover{text-decoration:underline}
+
+
+/* ===== Open positions: readability (larger · brighter) ===== */
+.job-head p{font-size:16.5px;color:#d3dbec}
+.job-head .ko-line{font-size:15px;color:#aeb9cf}
+.job-head .job-ask{font-size:15.5px;color:#d3dbec}
+.job .job-sub{font-size:15px;color:#b8c2d8}
+.job .ko{color:#aeb9cf;font-size:.9em}
+.job-grid h4{font-size:17.5px}
+.job-grid h4 span{font-size:14px;color:#aeb9cf}
+.job-grid li{font-size:15.5px;color:#d8e0ef;line-height:1.6;padding-bottom:11px}
+.job-grid li::before{top:10px}
+.job-foot dl{font-size:15.5px}
+.job-foot dt{font-size:14px;color:#a1acc4}
+.job-foot dd{color:#d8e0ef}
+.role-card h3{font-size:20px}
+.role-card h4{font-size:14px;color:#aeb9cf}
+.role-card p{font-size:15.5px;color:#d3dbec}
+.role-card .ko{font-size:13.5px;color:#aeb9cf}
+.role-meta li{font-size:15px;color:#d8e0ef}
+.role-meta b{font-size:11.5px}
+.role-contact{font-size:15px!important;color:#d3dbec!important}
