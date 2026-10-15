@@ -372,3 +372,14 @@ a.card:hover .visit{text-decoration:underline}
 .news-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;
   letter-spacing:.06em;text-transform:uppercase;padding:2px 9px;border-radius:999px;margin-bottom:7px;
   color:var(--ch,#5fd4bb);background:color-mix(in srgb,var(--ch,#5fd4bb) 12%,transparent)}
+
+/* ===== News pagination (1 · 2 · 3) ===== */
+.news-item[hidden]{display:none}
+.news-pager{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:24px}
+.news-pager[hidden]{display:none}
+.news-pager button{min-width:36px;height:36px;padding:0 10px;border-radius:8px;cursor:pointer;
+  font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--dim);
+  background:transparent;border:1px solid var(--line);transition:.15s}
+.news-pager button:hover:not(:disabled){border-color:var(--mint);color:var(--mint)}
+.news-pager button[aria-current="page"]{background:var(--mint);border-color:var(--mint);color:#08221c;font-weight:600}
+.news-pager button:disabled{opacity:.35;cursor:default}
