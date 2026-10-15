@@ -109,7 +109,31 @@
           <h2>News &amp; updates</h2>          
         </div>
       </div>
-      <div class="news-list">
+      <div class="news-list" id="news-list">
+        <div class="news-item">
+          <div class="news-date">2026 · 10</div>
+          <div class="news-body" style="--ch:#e8b04b">
+            <span class="news-tag">Grant</span>
+            <h4>New <b>NRF</b> research grant awarded (2026.09.–2030.08.)</h4>
+            <p>Aging Vulnerability Atlas and Healthy Aging Prediction Based on Genetic Susceptibility and Multi-Axis Aging Trajectories — National Research Foundation of Korea, funded by the Ministry of Science and ICT (MSIT).</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2026 · 09</div>
+          <div class="news-body" style="--ch:#a48cf0">
+            <span class="news-tag">Presentation</span>
+            <h4>Oral presentation at <b>European Respiratory Society Congress 2026</b>, Barcelona, Spain</h4>
+            <p>Effects of short- and long-term air pollution exposure on imaging-based emphysema and gas trapping.</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2026 · 09</div>
+          <div class="news-body" style="--ch:#7aa7ff">
+            <span class="news-tag">Publication</span>
+            <h4>New paper in <b>Journal of Korean Society for Atmospheric Environment</b></h4>
+            <p>Calibration Approach of Indoor PM2.5 Concentrations with the PurpleAir for Epidemiological Studies.</p>
+          </div>
+        </div>        
         <div class="news-item">
           <div class="news-date">2026 · 06</div>
           <div class="news-body" style="--ch:#7aa7ff">
@@ -127,6 +151,54 @@
           </div>
         </div>
         <div class="news-item">
+          <div class="news-date">2026 · 01</div>
+          <div class="news-body" style="--ch:#a48cf0">
+            <span class="news-tag">Presentation</span>
+            <h4>Poster presentation at <b>JEA 2026 &amp; IEA-WPR Joint Meeting</b>, Nagasaki, Japan</h4>
+            <p>Sleep disturbances as a predictor of cerebrovascular disease and all-cause mortality.</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2025 · 12</div>
+          <div class="news-body" style="--ch:#5fd4bb">
+            <span class="news-tag">Book chapter</span>
+            <h4>Book chapter published</h4>
+            <p lang="ko">「AI·디지털 헬스 시대, 성차 기반 정밀 의료의 길을 묻다」(도서출판 대한의학)</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2025 · 12</div>
+          <div class="news-body" style="--ch:#7aa7ff">
+            <span class="news-tag">Publication</span>
+            <h4>New paper in <b>Journal of Endodontics</b></h4>
+            <p>Relationship between craniofacial skeletal patterns and the prevalence of tooth fractures.</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2025 · 12</div>
+          <div class="news-body" style="--ch:#7aa7ff">
+            <span class="news-tag">Publication</span>
+            <h4>New paper in <b>American Journal of Respiratory and Critical Care Medicine</b></h4>
+            <p>Impact of sleep apnea on perivascular diffusivity and cognition: a 4-year prospective cohort study.</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2025 · 10</div>
+          <div class="news-body" style="--ch:#a48cf0">
+            <span class="news-tag">Presentation</span>
+            <h4>Poster presentation at the <b>77th Fall Conference of the Korean Society for Preventive Medicine</b>, Busan</h4>
+            <p>Gender-specific association between sleep disturbances and risk of cerebrovascular disease.</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2025 · 10</div>
+          <div class="news-body" style="--ch:#7aa7ff">
+            <span class="news-tag">Publication</span>
+            <h4>New paper in <b>JAMA Network Open</b></h4>
+            <p>Obstructive sleep apnea and cerebral microbleeds in middle-aged and older adults.</p>
+          </div>
+        </div>
+        <div class="news-item">
           <div class="news-date">2025 · 09</div>
           <div class="news-body" style="--ch:#6bbf7b">
             <span class="news-tag">Lab</span>
@@ -135,6 +207,36 @@
           </div>
         </div>
       </div>
+       <nav class="news-pager" id="news-pager" aria-label="News pages" hidden></nav>
+      <script>
+      (function(){
+        var PER = 5;  /* 한 페이지에 보여줄 소식 수 */
+        var list  = document.getElementById('news-list');
+        var items = list.querySelectorAll('.news-item');
+        var pager = document.getElementById('news-pager');
+        var pages = Math.ceil(items.length / PER);
+        if (pages < 2) return;
+        function show(p, scroll){
+          items.forEach(function(el, i){ el.hidden = Math.floor(i / PER) !== p - 1; });
+          pager.innerHTML = '';
+          function add(label, page, cur, off, name){
+            var b = document.createElement('button');
+            b.type = 'button'; b.textContent = label;
+            if (cur)  b.setAttribute('aria-current', 'page');
+            if (off)  b.disabled = true;
+            if (name) b.setAttribute('aria-label', name);
+            b.onclick = function(){ show(page, true); };
+            pager.appendChild(b);
+          }
+          add('←', p - 1, false, p === 1, 'Previous page');
+          for (var i = 1; i <= pages; i++) add(String(i), i, i === p);
+          add('→', p + 1, false, p === pages, 'Next page');
+          if (scroll) list.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+        pager.hidden = false;
+        show(1);
+      })();
+      </script>     
     </div>
   </section>
 
