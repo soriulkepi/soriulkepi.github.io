@@ -425,3 +425,6 @@ a.card:hover .visit{text-decoration:underline}
 .role-contact a:hover{text-decoration:underline}
 @media (max-width:900px){.job{padding:24px 20px}.job-grid{grid-template-columns:1fr}
   .job-foot dl div{flex-direction:column;gap:2px}.job-foot dt{min-width:0}}
+
+.news-body a{color:var(--mint);text-decoration:none}
+.news-body a:hover{text-decoration:underline}
